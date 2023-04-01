@@ -18,7 +18,6 @@ export type MessageType = {
     id: number
     user: UserMessageType
     message: MessageMessageType
-
 }
 
 type UserMessageType = {
