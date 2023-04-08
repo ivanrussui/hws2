@@ -4,7 +4,7 @@ import { MessagePropsType } from '../message/Message';
 
 // создать тип вместо any и отобразить приходящие данные
 const FriendMessage = (props: MessagePropsType) => {
-    console.log(props)
+    // console.log(props)
     return (
         <div
             id={'hw1-friend-message-' + props.message.id}
