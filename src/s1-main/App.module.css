@@ -5,12 +5,14 @@
 }
 
 .hw {
+    padding: 24px 70px 35px;
     margin: 24px auto 35px;
-    /*border: 1px solid #D9D9D9;*/
+    border-top: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
 }
 
 .hwTitle {
-    font-family: 'Montserrat';
+    /*font-family: 'Montserrat';*/
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
