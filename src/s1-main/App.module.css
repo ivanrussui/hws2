@@ -15,7 +15,7 @@
 
 .hwTitle {
   max-width: 1280px;
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
   padding-left: 70px;
   margin: 0 auto;
   font-style: normal;
@@ -24,6 +24,3 @@
   line-height: 27px;
 }
 
-#hw1 {
-  max-width: 1280px;
-}

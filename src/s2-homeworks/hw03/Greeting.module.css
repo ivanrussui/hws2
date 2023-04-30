@@ -10,7 +10,7 @@
 
 .error {
     margin-top: 7px;
-    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Montserrat', sans-serif;*/
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -41,7 +41,7 @@
     height: 36px;
     background: #0066CC;
     border-radius: 3px;
-    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Montserrat', sans-serif;*/
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -63,7 +63,7 @@
 }
 
 .text {
-    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Montserrat', sans-serif;*/
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -72,7 +72,7 @@
 }
 
 .greeting {
-    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Montserrat', sans-serif;*/
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
