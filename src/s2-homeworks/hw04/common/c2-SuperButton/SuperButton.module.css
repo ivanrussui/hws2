@@ -1,8 +1,9 @@
 .button {
   transition: all 0.5s ease-out;
   cursor: pointer;
-  width: 132px;
-  height: 30px;
+  /*width: 132px;*/
+  /*height: 30px;*/
+  padding: 5px 24px;
   border-radius: 3px;
   /*font-family: 'Montserrat', sans-serif;*/
   font-style: normal;
@@ -21,7 +22,7 @@
 
 .secondary {
   color: #0066CC;
-  width: 176px;
+  /*width: 176px;*/
   border: 1px solid #0066CC;
   border-radius: 3px;
 }
