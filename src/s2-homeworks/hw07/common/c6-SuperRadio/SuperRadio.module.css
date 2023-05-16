@@ -1,4 +1,22 @@
+.label {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.options {
+  margin-left: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
 .radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
 }
 
 .radio::before {
@@ -8,8 +26,39 @@
 .radio:checked::before {
 }
 
-.label {
+/* для элемента input c type="radio" */
+.label>input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
 }
 
-.options {
+/* для элемента label связанного с .custom-radio */
+.label>span {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+/* создание в label псевдоэлемента  before со следующими стилями */
+.label>span::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  margin-right: 13px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+/* стили для радиокнопки, находящейся в состоянии checked */
+.label>input:checked+span::before {
+  border-color: #000000;
+  background-color: #FFFFFF;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='4' fill='000000'/%3e%3c/svg%3e");
 }
