@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react'
+import React, { useState } from 'react'
 import s from './HW11.module.css'
 import s2 from '../../s1-main/App.module.css'
 import { restoreState } from '../hw06/localStorage/localStorage'
@@ -15,20 +15,14 @@ function HW11() {
     const [value1, setValue1] = useState(restoreState<number>('hw11-value1', 0))
     const [value2, setValue2] = useState(restoreState<number>('hw11-value2', 100))
 
-    const change = (e: Event, value: number | number[], activeThumb: number) => {
+    const change = (event: Event, value: number | number[]) => {
         // пишет студент // если пришёл массив - сохранить значения в оба useState, иначе в первый
-        if (activeThumb === 1) {
-            // setValue1(value)
-            // console.log(value1)
+        if (Array.isArray(value)) {
+            setValue1(value[0])
+            setValue2(value[1])
+        } else {
+            setValue1(value)
         }
-        // if (Array.isArray(value)) {
-        //         setValue1(e.currentTarget.value)
-        //         setValue2(value2)
-        // } else {
-        // }
-        // let newValue: number = value
-        // setValue1(newValue)
-        // console.log(typeof newValue)
     }
 
     return (
@@ -42,7 +36,8 @@ function HW11() {
                         <SuperRange
                             id={'hw11-single-slider'}
                             // сделать так чтоб value1 изменялось // пишет студент
-                            onChange={(e: Event)=>change(e, value1, 1)}
+                            onChange={change}
+                            value={value1}
                         />
                     </div>
                     <div className={s.wrapper}>
@@ -50,7 +45,8 @@ function HW11() {
                         <SuperRange
                             id={'hw11-double-slider'}
                             // сделать так чтоб value1/2 изменялось // пишет студент
-                            onChange={(e) => change(e, [value1, value2], 2)}
+                            onChange={change}
+                            value={[value1, value2]}
                         />
                         <span id={'hw11-value-2'} className={s.number}>{value2}</span>
                     </div>
