@@ -14,18 +14,18 @@ import { AppStoreType } from '../hw10/bll/store';
 * */
 
 export type ThemeType = {
-    themeId: string
+    themeId: number
 }
 
 type ThemesType = {
-    id: string,
+    id: number,
     value: string
 }
 
 const themes: ThemesType[] = [
-    {id: '1', value: 'light'},
-    {id: '2', value: 'blue'},
-    {id: '3', value: 'dark'},
+    {id: 1, value: 'light'},
+    {id: 2, value: 'blue'},
+    {id: 3, value: 'dark'},
 ]
 
 const HW12 = () => {
@@ -33,7 +33,7 @@ const HW12 = () => {
     const themeId = useSelector<AppStoreType>(state => state.theme.themeId)
     const dispatch = useDispatch()
 
-    const change = (id: string) => { // дописать функцию
+    const change = (id: number) => { // дописать функцию
         const action = changeThemeId(id)
         dispatch(action)
     }
