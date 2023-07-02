@@ -10,10 +10,10 @@
   justify-content: space-between;
   box-shadow: 0 0 40px rgba(29, 33, 38, 0.13), 0 0 2px rgba(29, 33, 38, 0.1);
   min-height: 60px;
+  background: #FFFFFF;
 }
 
 .header h1 {
-  /*font-family: 'Montserrat', sans-serif;*/
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
